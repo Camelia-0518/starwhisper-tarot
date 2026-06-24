@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 33% 7%;
+    --foreground: 270 60% 95%;
+    --card: 240 40% 12%;
+    --card-foreground: 270 60% 95%;
+    --popover: 240 40% 12%;
+    --popover-foreground: 270 60% 95%;
+    --primary: 43 52% 54%;
+    --primary-foreground: 240 33% 7%;
+    --secondary: 240 33% 15%;
+    --secondary-foreground: 270 60% 95%;
+    --muted: 240 33% 15%;
+    --muted-foreground: 240 20% 75%;
+    --accent: 240 33% 20%;
+    --accent-foreground: 270 60% 95%;
+    --destructive: 0 40% 38%;
+    --destructive-foreground: 270 60% 95%;
+    --border: 43 52% 54%;
+    --input: 240 33% 20%;
+    --ring: 43 52% 54%;
+    --radius: 0.625rem;
+    --sidebar-background: 240 33% 7%;
+    --sidebar-foreground: 270 60% 95%;
+    --sidebar-primary: 43 52% 54%;
+    --sidebar-primary-foreground: 240 33% 7%;
+    --sidebar-accent: 240 33% 15%;
+    --sidebar-accent-foreground: 270 60% 95%;
+    --sidebar-border: 43 52% 30%;
+    --sidebar-ring: 43 52% 54%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-deep-night text-star-white font-sans-sc antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif-sc;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0A1A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A2A5C;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C9A84C;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #C9A84C, #E8D48B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, #C9A84C, #E8D48B);
+  }
+
+  .border-gold {
+    border-color: rgba(201, 168, 76, 0.3);
+  }
+
+  .border-gold-light {
+    border-color: rgba(201, 168, 76, 0.6);
+  }
+
+  .backdrop-tarot {
+    background: rgba(10, 10, 26, 0.85);
+    backdrop-filter: blur(12px);
+  }
+}
